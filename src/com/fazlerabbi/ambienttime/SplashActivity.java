@@ -1,4 +1,4 @@
-package com.fazlerabbi.silicon;
+package com.fazlerabbi.ambienttime;
 
 import android.app.Activity;
 import android.content.Intent;

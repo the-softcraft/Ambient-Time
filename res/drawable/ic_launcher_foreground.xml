@@ -1,35 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Adaptive icon foreground: sun + content bars (Silicon).
-     108dp canvas, ink kept inside the 66dp safe circle. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp"
-    android:height="108dp"
-    android:viewportWidth="108"
-    android:viewportHeight="108">
+    android:width="1024dp"
+    android:height="1024dp"
+    android:viewportWidth="1024"
+    android:viewportHeight="1024">
 
-    <!-- sun -->
+    <!-- Background -->
     <path
-        android:fillColor="#F4FBFF"
-        android:pathData="M27.40,52.10 A26.60,26.60 0 0 1 80.60,52.10 Z" />
+        android:fillColor="#20A95E"
+        android:pathData="M285,80 L739,80 A205,205 0 0 1 944,285 L944,739 A205,205 0 0 1 739,944 L285,944 A205,205 0 0 1 80,739 L80,285 A205,205 0 0 1 285,80 Z" />
 
-    <!-- bar 1 -->
+    <!-- Clock casing -->
     <path
-        android:fillColor="#E6FFFFFF"
-        android:pathData="M29.30,55.90 H78.70 A1.90,1.90 0 0 1 80.60,57.80 V57.80 A1.90,1.90 0 0 1 78.70,59.70 H29.30 A1.90,1.90 0 0 1 27.40,57.80 V57.80 A1.90,1.90 0 0 1 29.30,55.90 Z" />
+        android:fillColor="#F7F3E8"
+        android:strokeColor="#17191D"
+        android:strokeWidth="27"
+        android:pathData="M270,355 L754,355 A65,65 0 0 1 819,420 L819,680 A65,65 0 0 1 754,745 L270,745 A65,65 0 0 1 205,680 L205,420 A65,65 0 0 1 270,355 Z" />
 
-    <!-- bar 2 -->
+    <!-- Display -->
     <path
-        android:fillColor="#BFFFFFFF"
-        android:pathData="M33.10,63.50 H74.90 A1.90,1.90 0 0 1 76.80,65.40 V65.40 A1.90,1.90 0 0 1 74.90,67.30 H33.10 A1.90,1.90 0 0 1 31.20,65.40 V65.40 A1.90,1.90 0 0 1 33.10,63.50 Z" />
+        android:fillColor="#17191D"
+        android:strokeColor="#17191D"
+        android:strokeWidth="12"
+        android:pathData="M298,415 L726,415 A38,38 0 0 1 764,453 L764,642 A38,38 0 0 1 726,680 L298,680 A38,38 0 0 1 260,642 L260,453 A38,38 0 0 1 298,415 Z" />
 
-    <!-- bar 3 -->
-    <path
-        android:fillColor="#8CFFFFFF"
-        android:pathData="M38.80,71.10 H69.20 A1.90,1.90 0 0 1 71.10,73.00 V73.00 A1.90,1.90 0 0 1 69.20,74.90 H38.80 A1.90,1.90 0 0 1 36.90,73.00 V73.00 A1.90,1.90 0 0 1 38.80,71.10 Z" />
+    <!-- Digital display: 10:24 -->
+    <group android:fillColor="#F7F3E8">
 
-    <!-- bar 4 -->
+        <!-- 1 -->
+        <path
+            android:pathData="M345,485 L365,465 L382,480 L382,605 L362,625 L345,610 Z" />
+
+        <!-- 0 -->
+        <path
+            android:fillType="evenOdd"
+            android:pathData="M415,465 H485 L505,485 V605 L485,625 H415 L395,605 V485 Z M425,487 L415,497 V593 L425,603 H475 L485,593 V497 L475,487 Z" />
+
+        <!-- Colon -->
+        <path
+            android:pathData="M535,500 A10,10 0 1 1 535,520 A10,10 0 1 1 535,500 Z" />
+        <path
+            android:pathData="M535,570 A10,10 0 1 1 535,590 A10,10 0 1 1 535,570 Z" />
+
+        <!-- 2 -->
+        <path
+            android:pathData="M575,465 H655 L675,485 V535 L655,555 H595 V595 H675 V625 H575 V545 L595,525 H645 V495 H575 Z" />
+
+        <!-- 4 -->
+        <path
+            android:pathData="M695,465 H725 V525 H765 V465 H795 V625 H765 V555 H695 Z" />
+    </group>
+
+    <!-- Feet -->
     <path
-        android:fillColor="#59FFFFFF"
-        android:pathData="M44.50,78.70 H63.50 A1.90,1.90 0 0 1 65.40,80.60 V80.60 A1.90,1.90 0 0 1 63.50,82.50 H44.50 A1.90,1.90 0 0 1 42.60,80.60 V80.60 A1.90,1.90 0 0 1 44.50,78.70 Z" />
+        android:fillColor="#17191D"
+        android:pathData="M295,745 L275,785 H395 L380,745 Z" />
+
+    <path
+        android:fillColor="#17191D"
+        android:pathData="M645,745 L630,785 H750 L730,745 Z" />
+
+    <!-- Display highlight -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeAlpha="0.15"
+        android:strokeWidth="12"
+        android:strokeLineCap="round"
+        android:pathData="M295,450 L365,450" />
+
+    <!-- Ambient accents -->
+    <path
+        android:strokeColor="#F7F3E8"
+        android:strokeWidth="24"
+        android:strokeLineCap="round"
+        android:pathData="M720,275 L745,235" />
+
+    <path
+        android:strokeColor="#F7F3E8"
+        android:strokeWidth="24"
+        android:strokeLineCap="round"
+        android:pathData="M785,310 L820,280" />
 
 </vector>
