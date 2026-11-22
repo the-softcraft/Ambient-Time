@@ -285,12 +285,15 @@
   }
 
   fsBtn.addEventListener('click', async () => {
+    const N = window.Native;
     try {
       if (!fullscreenElement()) {
+        if (N && N.setFullscreen) N.setFullscreen(true);
         const req = document.documentElement.requestFullscreen
           || document.documentElement.webkitRequestFullscreen;
         if (req) await req.call(document.documentElement);
       } else {
+        if (N && N.setFullscreen) N.setFullscreen(false);
         const exit = document.exitFullscreen || document.webkitExitFullscreen;
         if (exit) await exit.call(document);
       }

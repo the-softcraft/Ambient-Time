@@ -577,6 +577,22 @@ public class MainActivity extends Activity {
         }
 
         @JavascriptInterface
+        public void setFullscreen(final boolean on) {
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    if (on) {
+                        getWindow().getDecorView().setSystemUiVisibility(
+                            View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+                    } else {
+                        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+                    }
+                }
+            });
+        }
+
+        @JavascriptInterface
         public void vibrate(int ms) {
             Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
             if (v == null || !v.hasVibrator()) {
