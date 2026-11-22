@@ -280,20 +280,25 @@
   }
 
   function syncFullscreenIcon() {
-    fsIcon.setAttribute('href', fullscreenElement() ? '#i-minimize' : '#i-maximize');
-    fsBtn.setAttribute('aria-label', fullscreenElement() ? 'Exit fullscreen' : 'Enter fullscreen');
+    const isFs = !!fullscreenElement() || nativeFs;
+    fsIcon.setAttribute('href', isFs ? '#i-minimize' : '#i-maximize');
+    fsBtn.setAttribute('aria-label', isFs ? 'Exit fullscreen' : 'Enter fullscreen');
   }
 
+  let nativeFs = false;
   fsBtn.addEventListener('click', async () => {
     const N = window.Native;
     try {
-      if (!fullscreenElement()) {
+      const isFs = !!fullscreenElement() || nativeFs;
+      if (!isFs) {
         if (N && N.setFullscreen) N.setFullscreen(true);
+        nativeFs = true;
         const req = document.documentElement.requestFullscreen
           || document.documentElement.webkitRequestFullscreen;
         if (req) await req.call(document.documentElement);
       } else {
         if (N && N.setFullscreen) N.setFullscreen(false);
+        nativeFs = false;
         const exit = document.exitFullscreen || document.webkitExitFullscreen;
         if (exit) await exit.call(document);
       }
