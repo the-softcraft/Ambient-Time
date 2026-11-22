@@ -274,7 +274,8 @@
   }
 
   /* auto fullscreen on load */
-  (function () { var N = window.Native; if (N && N.setFullscreen) N.setFullscreen(true); nativeFs = true; if (typeof syncFullscreenIcon === 'function') syncFullscreenIcon(); })();
+  var nativeFs = false;
+  (function () { var N = window.Native; if (N && N.setFullscreen) { N.setFullscreen(true); nativeFs = true; } if (typeof syncFullscreenIcon === 'function') syncFullscreenIcon(); })();
 
   /* ----------------------------------------------------------- fullscreen */
 
@@ -288,7 +289,7 @@
     fsBtn.setAttribute('aria-label', isFs ? 'Exit fullscreen' : 'Enter fullscreen');
   }
 
-  var nativeFs = false;
+  // nativeFs declared/initialized by auto-fullscreen block above
   fsBtn.addEventListener('click', async () => {
     const N = window.Native;
     try {
