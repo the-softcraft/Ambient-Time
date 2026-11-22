@@ -4,10 +4,10 @@
   <img src="./design/standby-clock.svg" alt="Standby Clock" width="170" height="" />
 </p>
 
-<h1 align="center">Standby Clock</h1>
+<h1 align="center">Ambient Time</h1>
 
 <p align="center">
-  <em>An always-on bedside or tableside clock with aesthetic designs. Perfect for productivity nerds.</em>
+  <em>An always-on bedside or tableside clock with aesthetic designs. Perfect for productivity nerds. Turn your desk or table into a premium-looking space with it.</em>
 </p>
 <p>
 
@@ -21,7 +21,7 @@
 <h2 align="center">Download</h2>
 
 <p align="center">
-  <a href="https://github.com/fazle-rabbi-dev/Standby-Clock/releases/latest">
+  <a href="https://github.com/the-softcraft/Ambient-Time/releases/download/v1.0.0/AmbientTime.apk">
     <img src="https://img.shields.io/badge/Download-Latest%20APK-2563eb?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" />
   </a>
 </p>
@@ -40,10 +40,12 @@ Standby Clock keeps your phone as a bedside clock with dimmed, ambient display. 
 
 <!-- Add screenshots here -->
 
-<img src="screenshots/three.png" height="256" />
-<img src="screenshots/four.png" height="256" />
-<img src="screenshots/one.png" height="256" />
-<img src="screenshots/two.png" height="256" />
+<p align="left">
+  <img src="screenshots/one.png" height="256" />
+  <img src="screenshots/two.png" height="256" />
+  <img src="screenshots/three.png" height="256" />
+  <img src="screenshots/four.png" height="256" />
+</p>
 
 ## Features
 
