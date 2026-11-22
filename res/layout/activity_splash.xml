@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash UI: centred icon + app name side-by-side over the dot-grid backdrop.
+     Root is transparent so the window background (painted by the OS on the
+     first frame) shows through. Colours flip with values-night automatically. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/splash_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- The real launcher icon, so splash and home screen match. -->
+        <ImageView
+            android:id="@+id/splash_mark"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/app_name"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:letterSpacing="0.01"
+            android:text="@string/app_name"
+            android:textColor="@color/splash_text"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

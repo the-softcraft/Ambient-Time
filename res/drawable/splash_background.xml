@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Painted by the OS as the window background, so the splash backdrop (flat
+     theme colour + dot grid) is there on the very first frame. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/splash_bg" />
+    <item android:drawable="@drawable/dot_pattern" />
+</layer-list>

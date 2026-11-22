@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#05060a" />
+  <title>Standby Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Icons: Lucide (ISC), inlined so they render inside a file:// WebView. -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-maximize" viewBox="0 0 24 24">
+      <path d="M8 3H5a2 2 0 0 0-2 2v3" />
+      <path d="M21 8V5a2 2 0 0 0-2-2h-3" />
+      <path d="M3 16v3a2 2 0 0 0 2 2h3" />
+      <path d="M16 21h3a2 2 0 0 0 2-2v-3" />
+    </symbol>
+    <symbol id="i-minimize" viewBox="0 0 24 24">
+      <path d="M8 3v3a2 2 0 0 1-2 2H3" />
+      <path d="M21 8h-3a2 2 0 0 1-2-2V3" />
+      <path d="M3 16h3a2 2 0 0 1 2 2v3" />
+      <path d="M16 21v-3a2 2 0 0 1 2-2h3" />
+    </symbol>
+  </svg>
+
+  <div class="stage" id="stage">
+    <div class="track" id="track">
+
+      <!-- 01 · Spectrum ------------------------------------------------ -->
+      <section class="clock clock--spectrum" aria-label="Spectrum clock">
+        <div class="spec-date">
+          <span data-bind="dowLong"></span>
+          <span class="sep-dot">/</span>
+          <span data-bind="day"></span>
+          <span data-bind="monLong"></span>
+        </div>
+
+        <div class="spec-time" aria-hidden="true">
+          <span class="d" data-bind="h1"></span>
+          <span class="d" data-bind="h2"></span>
+          <span class="colon">:</span>
+          <span class="d" data-bind="m1"></span>
+          <span class="d" data-bind="m2"></span>
+        </div>
+
+        <div class="spec-foot">
+          <span class="chip"><b data-bind="ss"></b><i>sec</i></span>
+          <span class="ampm" data-bind="ap"></span>
+        </div>
+      </section>
+
+      <!-- 02 · Tiles -------------------------------------------------- -->
+      <section class="clock clock--tiles" aria-label="Tiles clock">
+        <div class="tiles-date">
+          <span data-bind="dow"></span>
+          <b data-bind="day"></b>
+          <span data-bind="mon"></span>
+        </div>
+
+        <div class="tiles" aria-hidden="true">
+          <div class="tile tile--a" data-bind="h1"></div>
+          <div class="tile tile--b" data-bind="h2"></div>
+          <div class="tile tile--c" data-bind="m1"></div>
+          <div class="tile tile--d" data-bind="m2"></div>
+        </div>
+
+        <div class="tiles-foot">
+          <b data-bind="ss"></b>
+          <small>seconds</small>
+        </div>
+      </section>
+
+      <!-- 03 · Outline ------------------------------------------------ -->
+      <section class="clock clock--outline" aria-label="Outline clock">
+        <div class="out-top">
+          <span data-bind="dowLong"></span>
+          <span data-bind="day"></span>
+          <span data-bind="monLong"></span>
+        </div>
+
+        <div class="out-time" aria-hidden="true">
+          <span class="d hollow" data-bind="h1"></span>
+          <span class="d hollow" data-bind="h2"></span>
+          <span class="colon hollow">:</span>
+          <span class="d" data-bind="m1"></span>
+          <span class="d" data-bind="m2"></span>
+        </div>
+
+        <div class="out-bar"><i></i></div>
+
+        <div class="out-foot">
+          <span class="chip chip--dark"><b data-bind="ss"></b><i>sec</i></span>
+          <span class="ampm" data-bind="ap"></span>
+        </div>
+      </section>
+
+      <!-- 04 · Poster ------------------------------------------------- -->
+      <section class="clock clock--poster" aria-label="Poster clock">
+        <div class="post-rail">
+          <span class="rail-brand">standby</span>
+          <span class="rail-date"><b data-bind="day"></b> <span data-bind="mon"></span></span>
+          <span class="rail-day" data-bind="dow"></span>
+        </div>
+
+        <div class="post-time" aria-hidden="true">
+          <div class="post-row post-row--h">
+            <span data-bind="hh"></span>
+            <em>hrs</em>
+          </div>
+          <div class="post-row post-row--m">
+            <span data-bind="mm"></span>
+            <em>min</em>
+          </div>
+        </div>
+
+        <div class="post-sec">
+          <b data-bind="ss"></b>
+          <small>sec</small>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="chrome" id="chrome">
+    <div class="topbar">
+      <button class="ghost" id="format" aria-label="Toggle 12 or 24 hour clock">24H</button>
+      <button class="ghost ghost--icon" id="fullscreen" aria-label="Toggle fullscreen" title="Fullscreen (F)">
+        <svg class="ico"><use id="fsIcon" href="#i-maximize"></use></svg>
+      </button>
+    </div>
+
+    <p class="hint" id="hint">Swipe to change clock</p>
+
+    <div class="dots" id="dots" role="tablist" aria-label="Clock designs">
+      <button class="dot is-active" data-index="0" role="tab" aria-label="Clock 1"></button>
+      <button class="dot" data-index="1" role="tab" aria-label="Clock 2"></button>
+      <button class="dot" data-index="2" role="tab" aria-label="Clock 3"></button>
+      <button class="dot" data-index="3" role="tab" aria-label="Clock 4"></button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
