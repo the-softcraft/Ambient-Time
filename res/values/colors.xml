@@ -6,7 +6,7 @@
     <color name="app_window_bg">#FF0B1020</color>
 
     <!-- Status/navigation bar tint. Light values here, night values in values-night. -->
-    <color name="system_bar_bg">#FFF7F9F7</color>
+    <color name="system_bar_bg">#FF0A0D0C</color>
 
     <!-- Splash: LIGHT theme (default). Night values live in values-night. -->
     <color name="splash_bg">#F7F9F7</color>
