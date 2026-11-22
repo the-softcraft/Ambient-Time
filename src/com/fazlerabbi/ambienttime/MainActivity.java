@@ -180,15 +180,8 @@ public class MainActivity extends Activity {
         w.setNavigationBarColor(!night && Build.VERSION.SDK_INT < 26 ? 0xFF0B1020 : bg);
 
         int flags = w.getDecorView().getSystemUiVisibility();
-        if (night) {
-            flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            flags &= ~View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-        } else {
-            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            if (Build.VERSION.SDK_INT >= 26) {
-                flags |= View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
-            }
-        }
+        flags &= ~View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+        flags &= ~View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR;
         w.getDecorView().setSystemUiVisibility(flags);
     }
 

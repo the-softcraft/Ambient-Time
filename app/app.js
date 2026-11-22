@@ -273,6 +273,9 @@
     }
   }
 
+  /* auto fullscreen on load */
+  (function () { var N = window.Native; if (N && N.setFullscreen) N.setFullscreen(true); nativeFs = true; })();
+
   /* ----------------------------------------------------------- fullscreen */
 
   function fullscreenElement() {
@@ -285,7 +288,7 @@
     fsBtn.setAttribute('aria-label', isFs ? 'Exit fullscreen' : 'Enter fullscreen');
   }
 
-  let nativeFs = false;
+  var nativeFs = false;
   fsBtn.addEventListener('click', async () => {
     const N = window.Native;
     try {
