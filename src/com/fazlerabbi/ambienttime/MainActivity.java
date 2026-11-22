@@ -579,7 +579,8 @@ public class MainActivity extends Activity {
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
                     } else {
-                        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_VISIBLE);
+                        getWindow().getDecorView().setSystemUiVisibility(0);
+                        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
                     }
                 }
             });
