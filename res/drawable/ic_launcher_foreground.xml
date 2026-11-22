@@ -1,83 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="1024dp"
     android:height="1024dp"
     android:viewportWidth="1024"
     android:viewportHeight="1024">
 
-    <!-- Background -->
     <path
         android:fillColor="#20A95E"
-        android:pathData="M285,80 L739,80 A205,205 0 0 1 944,285 L944,739 A205,205 0 0 1 739,944 L285,944 A205,205 0 0 1 80,739 L80,285 A205,205 0 0 1 285,80 Z" />
-
-    <!-- Clock casing -->
+        android:pathData="M 285 80 L 739 80 Q 944 80 944 285 L 944 739 Q 944 944 739 944 L 285 944 Q 80 944 80 739 L 80 285 Q 80 80 285 80 Z" />
     <path
         android:fillColor="#F7F3E8"
         android:strokeColor="#17191D"
         android:strokeWidth="27"
-        android:pathData="M270,355 L754,355 A65,65 0 0 1 819,420 L819,680 A65,65 0 0 1 754,745 L270,745 A65,65 0 0 1 205,680 L205,420 A65,65 0 0 1 270,355 Z" />
-
-    <!-- Display -->
+        android:pathData="M 270 355 L 754 355 Q 819 355 819 420 L 819 680 Q 819 745 754 745 L 270 745 Q 205 745 205 680 L 205 420 Q 205 355 270 355 Z" />
     <path
         android:fillColor="#17191D"
         android:strokeColor="#17191D"
         android:strokeWidth="12"
-        android:pathData="M298,415 L726,415 A38,38 0 0 1 764,453 L764,642 A38,38 0 0 1 726,680 L298,680 A38,38 0 0 1 260,642 L260,453 A38,38 0 0 1 298,415 Z" />
-
-    <!-- Digital display: 10:24 -->
-    <group android:fillColor="#F7F3E8">
-
-        <!-- 1 -->
-        <path
-            android:pathData="M345,485 L365,465 L382,480 L382,605 L362,625 L345,610 Z" />
-
-        <!-- 0 -->
-        <path
-            android:fillType="evenOdd"
-            android:pathData="M415,465 H485 L505,485 V605 L485,625 H415 L395,605 V485 Z M425,487 L415,497 V593 L425,603 H475 L485,593 V497 L475,487 Z" />
-
-        <!-- Colon -->
-        <path
-            android:pathData="M535,500 A10,10 0 1 1 535,520 A10,10 0 1 1 535,500 Z" />
-        <path
-            android:pathData="M535,570 A10,10 0 1 1 535,590 A10,10 0 1 1 535,570 Z" />
-
-        <!-- 2 -->
-        <path
-            android:pathData="M575,465 H655 L675,485 V535 L655,555 H595 V595 H675 V625 H575 V545 L595,525 H645 V495 H575 Z" />
-
-        <!-- 4 -->
-        <path
-            android:pathData="M695,465 H725 V525 H765 V465 H795 V625 H765 V555 H695 Z" />
-    </group>
-
-    <!-- Feet -->
+        android:pathData="M 298 415 L 726 415 Q 764 415 764 453 L 764 642 Q 764 680 726 680 L 298 680 Q 260 680 260 642 L 260 453 Q 260 415 298 415 Z" />
+    <path
+        android:fillColor="#F7F3E8"
+        android:pathData="M345 485 L365 465 L382 480 L382 605 L362 625 L345 610 Z" />
+    <path
+        android:fillColor="#F7F3E8"
+        android:fillType="evenOdd"
+        android:pathData="M415 465 H485 L505 485 V605 L485 625 H415 L395 605 V485 Z M425 487 L415 497 V593 L425 603 H475 L485 593 V497 L475 487 Z" />
+    <path
+        android:fillColor="#F7F3E8"
+        android:pathData="M 535 500 C 540.522847498 500 545 504.477152502 545 510 C 545 515.522847498 540.522847498 520 535 520 C 529.477152502 520 525 515.522847498 525 510 C 525 504.477152502 529.477152502 500 535 500 Z" />
+    <path
+        android:fillColor="#F7F3E8"
+        android:pathData="M 535 570 C 540.522847498 570 545 574.477152502 545 580 C 545 585.522847498 540.522847498 590 535 590 C 529.477152502 590 525 585.522847498 525 580 C 525 574.477152502 529.477152502 570 535 570 Z" />
+    <path
+        android:fillColor="#F7F3E8"
+        android:pathData="M575 465 H655 L675 485 V535 L655 555 H595 V595 H675 V625 H575 V545 L595 525 H645 V495 H575 Z" />
+    <path
+        android:fillColor="#F7F3E8"
+        android:pathData="M695 465 H725 V525 H765 V465 H795 V625 H765 V555 H695 Z" />
     <path
         android:fillColor="#17191D"
-        android:pathData="M295,745 L275,785 H395 L380,745 Z" />
-
+        android:pathData="M295 745 L275 785 H395 L380 745 Z" />
     <path
         android:fillColor="#17191D"
-        android:pathData="M645,745 L630,785 H750 L730,745 Z" />
-
-    <!-- Display highlight -->
+        android:pathData="M645 745 L630 785 H750 L730 745 Z" />
     <path
+        android:fillColor="#000000"
         android:strokeColor="#FFFFFF"
-        android:strokeAlpha="0.15"
+        android:strokeAlpha=".15"
         android:strokeWidth="12"
         android:strokeLineCap="round"
-        android:pathData="M295,450 L365,450" />
-
-    <!-- Ambient accents -->
+        android:pathData="M295 450 L365 450" />
     <path
+        android:fillColor="#000000"
         android:strokeColor="#F7F3E8"
         android:strokeWidth="24"
         android:strokeLineCap="round"
-        android:pathData="M720,275 L745,235" />
-
+        android:pathData="M720 275 L745 235" />
     <path
+        android:fillColor="#000000"
         android:strokeColor="#F7F3E8"
         android:strokeWidth="24"
         android:strokeLineCap="round"
-        android:pathData="M785,310 L820,280" />
-
+        android:pathData="M785 310 L820 280" />
 </vector>
