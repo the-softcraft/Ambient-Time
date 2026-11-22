@@ -274,7 +274,7 @@
   }
 
   /* auto fullscreen on load */
-  (function () { var N = window.Native; if (N && N.setFullscreen) N.setFullscreen(true); nativeFs = true; })();
+  (function () { var N = window.Native; if (N && N.setFullscreen) N.setFullscreen(true); nativeFs = true; if (typeof syncFullscreenIcon === 'function') syncFullscreenIcon(); })();
 
   /* ----------------------------------------------------------- fullscreen */
 
